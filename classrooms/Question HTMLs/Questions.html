@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Science Unit 1 Questions:</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #3498db, #2980b9); /* Blue gradient background */
+            color: #fff; /* Text color */
+        }
+        h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            color: #333; /* Text color for flashcards */
+        }
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024; /* Text color for answers */
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: #120606;">Computer Science Unit 1 Questions:</h1>
+    <div class="flashcard-container">
+        
+        <div class="flashcard" onclick="toggleDefinition('binaryPrefixes')">
+            <div class="flashcard-keyword">Question: Explain the difference between "kibi" and "kilo" in the context of binary magnitudes</div>
+            <div id="definition-binaryPrefixes" class="flashcard-definition">
+                <strong>Answer:</strong> "Kibi" represents 2^10 (1024), while "kilo" represents 10^3 (1000) in the binary and decimal systems, respectively.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberSystems')">
+            <div class="flashcard-keyword">Question: Describe the significance of binary, denary, and hexadecimal number bases</div>
+            <div id="definition-numberSystems" class="flashcard-definition">
+                <strong>Answer:</strong> Binary is base-2, denary is base-10, and hexadecimal is base-16. They are different numeral systems used for representing numbers in computing.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberBaseConversion')">
+            <div class="flashcard-keyword">Question: Demonstrate how to convert an integer value from binary to denary representation</div>
+            <div id="definition-numberBaseConversion" class="flashcard-definition">
+                <strong>Answer:</strong> To convert from binary to denary, multiply each binary digit by 2 raised to the power of its position and sum the results.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('overflowAndApplications')">
+            <div class="flashcard-keyword">Question: Explain the concept of overflow in the context of binary arithmetic</div>
+            <div id="definition-overflowAndApplications" class="flashcard-definition">
+                <strong>Answer:</strong> Overflow occurs when the result of a binary operation exceeds the maximum representable value, causing inaccuracies or errors.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('characterDataRepresentation')">
+            <div class="flashcard-keyword">Question: How is character data represented in its internal binary form, considering different character sets</div>
+            <div id="definition-characterDataRepresentation" class="flashcard-definition">
+                <strong>Answer:</strong> Character data is represented in binary using character sets like ASCII, extended ASCII, or Unicode, where each character is assigned a unique binary code.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsBitmapImages')">
+            <div class="flashcard-keyword">Question: Define the terms pixel, file header, image resolution, and colour depth/bit depth</div>
+            <div id="definition-multimediaGraphicsBitmapImages" class="flashcard-definition">
+                <strong>Answer:</strong> A pixel is the smallest unit in an image, a file header contains metadata, image resolution is the number of pixels in an image, and colour depth/bit depth is the number of bits used to represent each pixel's color.
+            </div>
+        </div>
+
+        <!-- Add more flashcards for the remaining questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsVectorGraphics')">
+            <div class="flashcard-keyword">Question: Explain how data for a vector graphic is encoded</div>
+            <div id="definition-multimediaGraphicsVectorGraphics" class="flashcard-definition">
+                <strong>Answer:</strong> Data for a vector graphic is encoded using drawing objects, properties, and drawing lists, representing the geometric shapes and attributes of the image.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('soundRepresentation')">
+            <div class="flashcard-keyword">Question: Describe the representation and encoding of sound, including terms like sampling, sampling rate, and sampling resolution</div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Science Unit 3 Questions:</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #3498db, #2980b9); /* Blue gradient background */
+            color: #fff; /* Text color */
+        }
+        h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            color: #333; /* Text color for flashcards */
+        }
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024; /* Text color for answers */
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: #120606;">Computer Science Unit 3 Questions:</h1>
+    <div class="flashcard-container">
+        
+        <div class="flashcard" onclick="toggleDefinition('binaryPrefixes')">
+            <div class="flashcard-keyword">Question: What is the function of a NOT gate?</div>
+            <div id="definition-binaryPrefixes" class="flashcard-definition">
+                <strong>Answer:</strong>A NOT gate inverts its input signal; if the input is 1 (true), the output is 0 (false), and vice versa.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberSystems')">
+            <div class="flashcard-keyword">Question: How do you construct a truth table for an AND gate?
+
+            </div>
+            <div id="definition-numberSystems" class="flashcard-definition">
+                <strong>Answer:</strong> An AND gate outputs 1 only if all its inputs are 1. For two inputs, the truth table shows an output of 1 only when both inputs are 1.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberBaseConversion')">
+            <div class="flashcard-keyword">Question: Demonstrate how to convert an integer value from binary to denary representation</div>
+            <div id="definition-numberBaseConversion" class="flashcard-definition">
+                <strong>Answer:</strong> To convert from binary to denary, multiply each binary digit by 2 raised to the power of its position and sum the results.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('overflowAndApplications')">
+            <div class="flashcard-keyword">Question: What is unique about the XOR (Exclusive OR) gate compared to the OR gate?
+
+            </div>
+            <div id="definition-overflowAndApplications" class="flashcard-definition">
+                <strong>Answer:</strong> An XOR gate outputs 1 when an odd number of inputs are 1, unlike an OR gate, which outputs 1 when at least one input is 1.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('characterDataRepresentation')">
+            <div class="flashcard-keyword">Question: How is character data represented in its internal binary form, considering different character sets</div>
+            <div id="definition-characterDataRepresentation" class="flashcard-definition">
+                <strong>Answer:</strong> Character data is represented in binary using character sets like ASCII, extended ASCII, or Unicode, where each character is assigned a unique binary code.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsBitmapImages')">
+            <div class="flashcard-keyword">Question: How can you construct a logic circuit from a problem statement?</div>
+            <div id="definition-multimediaGraphicsBitmapImages" class="flashcard-definition">
+                <strong>Answer:</strong> Identify the inputs and required output, determine the logical operations needed (using AND, OR, NOT, etc.), and then arrange the logic gates to achieve the desired output based on those conditions.r.
+            </div>
+        </div>
+
+        <!-- Add more flashcards for the remaining questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsVectorGraphics')">
+            <div class="flashcard-keyword">Question: Explain how data for a vector graphic is encoded</div>
+            <div id="definition-multimediaGraphicsVectorGraphics" class="flashcard-definition">
+                <strong>Answer:</strong> Data for a vector graphic is encoded using drawing objects, properties, and drawing lists, representing the geometric shapes and attributes of the image.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('soundRepresentation')">
+            <div class="flashcard-keyword">Question: Describe the representation and encoding of sound, including terms like sampling, sampling rate, and sampling resolution</div>

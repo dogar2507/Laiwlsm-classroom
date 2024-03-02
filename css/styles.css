@@ -1,0 +1,413 @@
+/* styles.css */
+/* Apply a global reset to margin, padding, and box-sizing for consistency across all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Set the default font and background for the entire page; the gradient creates a visual flow */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right bottom, #6a2c70, #b83b5e);
+    color: #fff;
+}
+
+
+
+/* Style the header, which contains the logo; white background to make the logo stand out */
+header {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Adjust the size of the logo image within the header for visibility */
+header #logo {
+    max-width: 300px;
+    height: auto;
+    /*adjust logo height */
+    margin-top: -300px;
+
+}
+
+/* Set up the main content area; flexbox allows for a responsive grid of classroom cards */
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the container takes up at least the height of the viewport */
+}
+
+/* Style individual classroom cards with flexbox for horizontal layout of text and image */
+.classroom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(33.333% - 40px);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 200px;
+    background-color: #45203a; /* Color theme for the cards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth and emphasis */
+}
+
+/* Style the image within each classroom card; ensures the image is not too large */
+.classroom img {
+    max-width: 100%; /* Allows image to fill the card width */
+    height: auto; /* Keeps image aspect ratio intact */
+    margin-bottom: 15px; /* Space between the image and the text below it */
+}
+
+
+/* Style the headings within each classroom card */
+.classroom h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Interactive effect for classroom cards on hover */
+.classroom:hover {
+    transform: translateY(-5px); /* Lifts the card slightly to indicate interactivity */
+}
+
+/* Style the footer, giving it a distinct background color and centering the text */
+footer {
+    background-color: #26081c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    top: 20px; /* Adds space before the footer */
+}
+
+/* Responsive styles for classroom cards on medium-sized screens (tablets) */
+@media (max-width: 768px) {
+    .classroom {
+        width: calc(50% - 40px); /* Adjust width to fit two cards per row */
+    }
+}
+
+/* Responsive styles for classroom cards on small screens (phones) */
+@media (max-width: 480px) {
+    .classroom {
+        width: calc(100% - 40px); /* Full width cards for narrow viewports */
+    }
+}
+
+
+.top-buttons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.top-buttons button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Style for the classroom cards and images layout */
+.classroom {
+    /* Change the flex-direction to column to stack the text above the image */
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the start */
+    justify-content: flex-start; /* Align image below the text */
+    width: calc(33.333% - 40px);
+    /* ... other styles ... */
+}
+
+.classroom img {
+    width: 100%; /* Make image take full width of the card */
+    height: auto;
+    margin-left: 0; /* Reset margin as image takes full width */
+}
+
+/* ... */
+
+/* Add a general class for borders based on the card's background color */
+.border-darken {
+    border-style: solid;
+    border-width: 2px;
+    /* use currentColor to reference the text color for the border, which should be set to a darker variant of the background */
+    border-color: currentColor;
+}
+
+/* Apply the border-darken class to cards with inline style or specific IDs for colors */
+#computer-science.border-darken { color: #0e2f1c; }
+#physics.border-darken { color: #5e1768; }
+#mathematics.border-darken { color: #3c0d11; }
+
+.top-buttons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.top-buttons button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff; /* Or any color that fits your header style */
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* ... existing responsive styles ... */
+/* ... existing styles ... */
+
+/* Style the anchor tags as buttons */
+.button {
+    display: inline-block;
+    font-size: 30px; /* Increased font size for larger buttons */
+    padding: 10px 20px; /* Padding to increase the size */
+    background: #ffffff; /* Button background */
+    color: #000000; /* Button text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    margin-left: 10px; /* Maintain spacing between buttons */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.button:hover {
+    background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+.classroom-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topics-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.topics-list, .flashcards-list {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.topics-list h2, .flashcards-list h2 {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.topics-list ul, .flashcards-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics-list li, .flashcards-list li {
+    background-color: #f7f7f7;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #6a2c70; /* Color accent for the list items */
+}
+
+.topics-list li a, .flashcards-list li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.topics-list li a:hover, .flashcards-list li a:hover {
+    background-color: #eaeaea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .topics-container {
+        flex-direction: column;
+    }
+
+    .topics-list, .flashcards-list {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.center-logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 300px; /* Decrease the max-width to reduce the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+.classroom-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Topics and flashcards list styles */
+.topics-container {
+    display: flex;
+    flex-direction: column; /* Stack the topics and flashcards on top of each other */
+    align-items: center; /* Center align the flex items */
+    margin: auto;
+    padding: 20px;
+}
+
+.topics-list, .flashcards-list {
+    text-align: center; /* Center the text within the lists */
+    padding: 0;
+}
+
+.topics-list ul, .flashcards-list ul {
+    list-style-type: none; /* Remove the default list styling */
+}
+
+.topics-list li, .flashcards-list li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.topics-list li a, .flashcards-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem; /* Slightly larger font size for the topics */
+    display: block; /* Make the links take up the entire list item space */
+}
+
+/* Specific styles for the computer-science.html page */
+.computer-science-page header {
+    /* Ensure header content is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.computer-science-page header #logo {
+    /* Adjust logo size */
+    max-width: 150px; /* Smaller logo for this page */
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.computer-science-page .classroom-content {
+    /* Center the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px; /* Space from the header */
+}
+
+.computer-science-page .classroom-content h1 {
+    /* Style for the main title */      
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.computer-science-page .topics-container {
+    /* Container for topics and questions */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Max width to control layout */
+    margin: 0 auto; /* Centering the container */
+}
+
+.computer-science-page .topics-list,
+.computer-science-page .flashcards-list {
+    /* List styles */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.computer-science-page .topics-list li,
+.computer-science-page .flashcards-list li {
+    /* List item styles */
+    background-color: #fff;
+    margin: 10px 0; /* Margin for spacing between items */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for the list items */
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center; /* Center the content of list items */
+    align-items: center;
+}
+
+.computer-science-page .topics-list li a,
+.computer-science-page .flashcards-list li a {
+    /* Anchor styles */
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 0 5px; /* Spacing between links */
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.computer-science-page .topics-list li a:hover,
+.computer-science-page .flashcards-list li a:hover {
+    /* Hover styles for anchors */
+    background-color: #eaeaea;
+}
+
+.computer-science-page .home-button {
+    /* 'Back to Home' button styles */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.classroom-list {
+    display: flex;
+    justify-content: center;
+}
+
+.classroom-link {
+    margin: 0 10px;
+}
+
+.classroom {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.classroom h2 {
+    margin-top: 0;
+}
+
+#computer-science {
+    order: 2;
+}
+
+#physics {
+    order: 1;
+}
+
+#mathematics {
+    order: 3;
+}
+
+@media (max-width: 600px) {
+    .classroom {
+        width: 90%;
+    }
+}

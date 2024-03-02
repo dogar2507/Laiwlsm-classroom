@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academic YouTube Links</title>
+</head>
+<body>
+    <h2>Enter your academic question:</h2>
+    <input type="text" id="questionInput" placeholder="Type your question here...">
+    <button onclick="fetchYouTubeLinks()">Get YouTube Links</button>
+    <div id="youtubeLinks"></div>
+
+    <script>
+        function fetchYouTubeLinks() {
+            const question = document.getElementById('questionInput').value;
+            const apiEndpoint = 'https://your-api-endpoint.com/getLinks'; // Replace with your actual API endpoint
+            const queryParams = `?question=${encodeURIComponent(question)}`;
+
+            fetch(`${apiEndpoint}${queryParams}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayLinks(data.links); // Assuming the API returns an object with a 'links' array
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+
+        function displayLinks(links) {
+            const linksContainer = document.getElementById('youtubeLinks');
+            linksContainer.innerHTML = ''; // Clear previous results
+
+            if (links.length === 0) {
+                linksContainer.innerHTML = 'No links found for the given question.';
+                return;
+            }
+
+            links.forEach(link => {
+                const elem = document.createElement('a');
+                elem.href = link;
+                elem.textContent = link;
+                elem.target = '_blank'; // Opens in a new tab
+                linksContainer.appendChild(elem);
+                linksContainer.appendChild(document.createElement('br')); // Adds a line break after each link
+            });
+        }
+        
+    </script>
+
+</body>
+</html>

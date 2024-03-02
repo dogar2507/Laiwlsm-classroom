@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Science Unit 5 Questions:</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #3498db, #2980b9); /* Blue gradient background */
+            color: #fff; /* Text color */
+        }
+        h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            color: #333; /* Text color for flashcards */
+        }
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024; /* Text color for answers */
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: #120606;">Computer Science Unit 5 Questions:</h1>
+    <div class="flashcard-container">
+        
+        <div class="flashcard" onclick="toggleDefinition('binaryPrefixes')">
+            <div class="flashcard-keyword">Question: Why does a computer system require an Operating System?</div>
+            <div id="definition-binaryPrefixes" class="flashcard-definition">
+                <strong>Answer:</strong>An OS is essential for managing computer hardware resources and providing common services for computer programs, facilitating a user interface and enabling application software to be run on the computer.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberSystems')">
+            <div class="flashcard-keyword">Question: What are the key management tasks carried out by an Operating System?
+
+            </div>
+            <div id="definition-numberSystems" class="flashcard-definition">
+                <strong>Answer:</strong> Memory management, file management, security management, hardware management (including input/output and peripherals), and process management.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberBaseConversion')">
+            <div class="flashcard-keyword">Question: What threats to computer and data security are posed by networks and the internet?</div>
+            <div id="definition-numberBaseConversion" class="flashcard-definition">
+                <strong>Answer:</strong>Malware (viruses, spyware), hackers, phishing, and pharming are significant threats.
+                
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('overflowAndApplications')">
+            <div class="flashcard-keyword">Question:How can the risks posed by these threats be restricted?
+
+            </div>
+            <div id="definition-overflowAndApplications" class="flashcard-definition">
+                <strong>Answer:</strong> Through security methods like encryption, setting access rights, using firewalls, and implementing secure authentication techniques.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('characterDataRepresentation')">
+            <div class="flashcard-keyword">Question: HHow do data validation and data verification protect the integrity of data?   </div>
+            <div id="definition-characterDataRepresentation" class="flashcard-definition">
+                <strong>Answer:</strong> Validation ensures that data input meets predefined criteria (e.g., range, format), while verification checks that data has been accurately transferred or entered.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsBitmapImages')">
+            <div class="flashcard-keyword">Question: How can you construct a logic circuit from a problem statement?</div>
+            <div id="definition-multimediaGraphicsBitmapImages" class="flashcard-definition">
+                <strong>Answer:</strong> Identify the inputs and required output, determine the logical operations needed (using AND, OR, NOT, etc.), and then arrange the logic gates to achieve the desired output based on those conditions.r.
+            </div>
+        </div>
+
+        <!-- Add more flashcards for the remaining questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsVectorGraphics')">
+            <div class="flashcard-keyword">What are some methods of data validation and verification?</div>
+            <div id="definition-multimediaGraphicsVectorGraphics" class="flashcard-definition">
+                <strong>Answer:</strong>Validation methods include range checks, format checks, and presence checks. Verification during data entry can involve visual checks and double entry, while data transfer verification might use parity checks and checksums
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('soundRepresentation')">
+            <div class="flashcard-keyword">Question: Describe the representation and encoding of sound, including terms like sampling, sampling rate, and sampling resolution</div>

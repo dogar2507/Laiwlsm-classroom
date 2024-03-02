@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Classroom</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+    <body class="computer-science-page">
+        
+    
+    
+    <header>
+        <a href="../index.html" class="home-button">🏠Home</a>
+        <img src="../images/logo.png" alt="Laiwlsm Classroom Logo" class="center-logo">
+    </header>
+    <style>
+        /* ... Your existing styles ... */
+
+        .topics-container {
+            display: flex;
+            justify-content: space-between;
+            /* Ensure there is space around the flex items */
+            padding: 10px;
+            gap: 20px; /* This adds space between your flex items */
+        }
+
+        .topics-list, .flashcards-list {
+            /* Assign flex basis for equal spacing, adjust as needed */
+            flex-basis: calc(33.333% - 20px);
+        }
+
+        .messages-box {
+            flex-basis: calc(33.333% - 20px); /* Adjust size as needed */
+            background-color: #fff; /* White background */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+            /* If you want the box to be the same height as the container: */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .messages-list {
+            list-style-type: none; /* Remove list bullets */
+            padding: 0;
+            margin-bottom: 20px; /* Space before the send message link */
+            overflow-y: auto; /* Allows scrolling for overflow content */
+            flex-grow: 1; /* Allows the list to grow and fill the space */
+        }
+
+        .messages-list li {
+            background-color: #f0f0f0; /* Light gray background for each message */
+            padding: 10px;
+            margin-bottom: 10px; /* Space between messages */
+            border-radius: 5px; /* Rounded corners for the message items */
+        }
+
+        .send-message-link {
+            display: block; /* Make the link fill the container width */
+            text-align: center; /* Center the link text */
+            padding: 10px;
+            background-color: #e9e9e9; /* Slightly darker background for the link */
+            color: #000;
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners for the link */
+            margin-top: auto; /* Pushes the link to the bottom */
+        }
+    
+
+.messages-box h2 {
+    color: #ff0000; /* Black color for "New Messages (2)" */
+}
+
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #000; /* Black color for messages */
+}
+
+.messages-list li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #000; /* Black color for message text */
+}
+    </style>
+    <main class="classroom-content">
+        <h1>Psychology:</h1>
+        <div class="topics-container">
+            <div class="topics-list">
+                <h2>Psychology Topics:</h2>
+                <ul>
+                    <li><a href="PDFs/ResearchMethods.pdf" target="_blank">Research Methods</a></li>
+                    <li><a href="PDFs/Psychopathology.pdf" target="_blank">Psychopathology</a></li>
+                    <li><a href="PDFs/Approaches.pdf" target="_blank">Approaches in Psychology</a></li>
+                    <li><a href="PDFs/SocialInfluence.pdf" target="_blank">Social Influence</a></li>
+                    <li><a href="PDFs/Memory.pdf" target="_blank">Memory</a></li>
+                    <li><a href="PDFs/Attachment.pdf" target="_blank">Attachment</a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="flashcards-list">
+                <h2>Topic Questions(Using ChatGPT API):</h2>
+                <ul>
+                    <li><a href="Question HTMLs/Questions.html">Research Methods Questions </a></li>
+                 <li><a href="Question HTMLs/PsychopathologyQuestions.html">Psychopathology Questions</a></li>
+                    <li><a href="https://example.com/unit3questions.html">Approaches Questions</a></li>
+                    <li><a href="https://example.com/unit4questions.html">Social Influence Questions</a></li>
+                    <li><a href="https://example.com/unit5questions.html">Memory Questions</a></li>
+                    <li><a href="https://example.com/unit6questions.html">Attachment Questions</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="messages-box">
+            <h2>New Messages (2)</h2>
+            <ul class="messages-list">
+                <li>Sahil Nalakath: can you send the homework</li>
+                <li>Danny Cargs: hello</li>
+            </ul>
+            <a href="#send-message" class="send-message-link">Send Message here</a>
+        </div>
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

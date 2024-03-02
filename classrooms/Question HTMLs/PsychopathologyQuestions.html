@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Psychopathology Questions:</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #c834db, #9c155b); /* Blue gradient background */
+            color: #fff; /* Text color */
+        }
+        h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            color: #333; /* Text color for flashcards */
+        }
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024; /* Text color for answers */
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: #120606;">Psychopathology Questions:</h1>
+    <div class="flashcard-container">
+
+        <!-- Replace existing flashcards with new questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('statisticalInfrequency')">
+            <div class="flashcard-keyword">Question: What does the statistical infrequency definition of abnormality imply?</div>
+            <div id="definition-statisticalInfrequency" class="flashcard-definition">
+                <strong>Answer:</strong> The statistical infrequency definition suggests that a disorder is abnormal if its frequency is more than two standard deviations away from the mean incidence rates on a normally-distributed bell curve.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('usageInClinicalDiagnoses')">
+            <div class="flashcard-keyword">Question: How is statistical infrequency used in clinical diagnoses, and what are its limitations?</div>
+            <div id="definition-usageInClinicalDiagnoses" class="flashcard-definition">
+                <strong>Answer:</strong> Statistical infrequency is used in clinical diagnoses for comparison with a baseline or 'normal' value, assessing the disorder's severity. However, it assumes that any abnormal characteristics are automatically negative, which is not always the case.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('failureToFunctionAdequately')">
+            <div class="flashcard-keyword">Question: According to the failure to function adequately definition, when is a person considered abnormal?</div>
+            <div id="definition-failureToFunctionAdequately" class="flashcard-definition">
+                <strong>Answer:</strong> The failure to function adequately definition suggests that if a person's current mental state prevents them from leading a 'normal' life, they may be considered abnormal. This includes not obeying social and interpersonal rules, distress, and dangerous behavior.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('strengthOfFailureToFunctionAdequately')">
+            <div class="flashcard-keyword">Question: What is a major strength of the failure to function adequately definition?</div>
+            <div id="definition-strengthOfFailureToFunctionAdequately" class="flashcard-definition">
+                <strong>Answer:</strong> A major strength is that it takes into account the patient's perspective, incorporating both subjective self-reported symptoms and the psychiatrist's objective opinion for more accurate diagnoses.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('weaknessOfFailureToFunctionAdequately')">
+            <div class="flashcard-keyword">Question: What is a major weakness of the failure to function adequately definition?</div>
+            <div id="definition-weaknessOfFailureToFunctionAdequately" class="flashcard-definition">
+                <strong>Answer:</strong> A major weakness is the potential labeling of patients as 'strange' or 'crazy,' contributing to negative stereotypes about mental health disorders and possible discrimination or prejudice.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('deviationFromSocialNorms')">
+            <div class="flashcard-keyword">Question: According to the deviation from social norms definition, what determines 'abnormal' behavior?</div>
+            <div id="definition-deviationFromSocialNorms" class="flashcard-definition">
+                <strong>Answer:</strong> The deviation from social norms definition suggests that 'abnormal' behavior is based on straying away from the social norms specific to a certain culture.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('historicalExamplesOfDiscrimination')">
+            <div class="flashcard-keyword">Question: What historical examples highlight discrimination related to the deviation from social norms?</div>
+            <div id="definition-historicalExamplesOfDiscrimination" class="flashcard-definition">
+                <strong>Answer:</strong> In the nineteenth century, the diagnosis of 'nymphomania' was used to control women's behavior, reflecting discrimination and social control.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('drawbackOfDeviationFromIdealMentalHealth')">
+            <div class="flashcard-keyword">Question: What is a drawback of the deviation from ideal mental health definition?</div>
+            <div id="definition-drawbackOfDeviationFromIdealMentalHealth" class="flashcard-definition">
+                <strong>Answer:</strong> The main issue is that the definition may have unrealistic expectations, potentially considering the majority of the population abnormal, leading to limited diagnostic accuracy.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('culturalRelativismOfDeviationFromIdealMentalHealth')">
+            <div class="flashcard-keyword">Question: How does the deviation from ideal mental health definition suffer from cultural relativism?</div>
+            <div id="definition-culturalRelativismOfDeviationFromIdealMentalHealth" class="flashcard-definition">
+                <strong>Answer:</strong> The concept of self-actualization may be viewed differently in collectivist and individualist cultures, suggesting that the definition might only be accepted in certain cultural contexts.
+            </div>
+        </div>
+
+    
+       
+            

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+            background: linear-gradient(to right bottom, #3498db, #8e44ad);
+            color: #fff; /* White text color */
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        .support-image {
+            background-color: #F1F1E6;
+            max-width: 40%;
+            margin-right: 30px;
+        }
+
+        .support-text {
+            flex: 2;
+            max-width: 60%;
+        }
+
+        h2, p {
+            margin: 0 0 20px 0;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #f2f2f2;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .message-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .send-message-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .send-message-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style for name and email input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .inconvenience-message {
+            margin-top: 50px; /* Adjusted margin */
+            font-size: 1.2em; /* Adjusted font size */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Different font */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" class="home-button">🏠 Home</a>
+
+    <div class="content-container">
+        <img src="images/support.png" alt="Support Image" class="support-image">
+        
+        <div class="support-text">
+            <h2>Need Help?</h2>
+            <p>If you need any assistance, please don't hesitate to reach out to our support team.</p>
+
+            <!-- Message input box with name, email, and message -->
+            <form>
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
+                <textarea class="message-box" placeholder="Enter your message..."></textarea>
+                <button type="button" class="send-message-button" onclick="sendMessage()">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="inconvenience-message">We are extremely sorry for the inconvenience - Laiwlsm Team</div>
+
+    <script>
+        // Function to handle sending the message (you can customize this as needed)
+        function sendMessage() {
+            alert('Message sent!\n\nName: ' + document.getElementsByName('name')[0].value + '\nEmail: ' + document.getElementsByName('email')[0].value + '\nMessage: ' + document.getElementsByClassName('message-box')[0].value);
+            // Add your logic for sending messages here
+        }
+    </script>
+</body>
+
+</html>

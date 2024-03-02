@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Science Unit 4 Questions:</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #3498db, #2980b9); /* Blue gradient background */
+            color: #fff; /* Text color */
+        }
+        h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            color: #333; /* Text color for flashcards */
+        }
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024; /* Text color for answers */
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: #120606;">Computer Science Unit 4 Questions:</h1>
+    <div class="flashcard-container">
+        
+        <div class="flashcard" onclick="toggleDefinition('binaryPrefixes')">
+            <div class="flashcard-keyword">Question:What is the relationship between assembly language and machine code?</div>
+            <div id="definition-binaryPrefixes" class="flashcard-definition">
+                <strong>Answer:</strong> Assembly language is a more human-readable form of machine code. Each assembly language instruction corresponds to a specific machine code operation.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberSystems')">
+            <div class="flashcard-keyword">Question: What is immediate addressing mode?</div>
+            <div id="definition-numberSystems" class="flashcard-definition">
+                <strong>Answer:</strong>Immediate addressing mode allows an instruction to specify the actual data or operand within the instruction itself.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('numberBaseConversion')">
+            <div class="flashcard-keyword">Question: How does a two-pass assembler function?</div>
+            <div id="definition-numberBaseConversion" class="flashcard-definition">
+                <strong>Answer:</strong> In the first pass, it scans the code to identify all labels and calculate their addresses. In the second pass, it translates the assembly instructions into machine code, using the addresses defined in the first pass.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('overflowAndApplications')">
+            <div class="flashcard-keyword">Question:What is the purpose of the CMP instruction in assembly language?</div>
+            <div id="definition-overflowAndApplications" class="flashcard-definition">
+                <strong>Answer:</strong>The CMP instruction compares two values and sets the condition flags in the status register based on the result, which can then influence conditional branch instructions.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('characterDataRepresentation')">
+            <div class="flashcard-keyword">Question:How are bitwise AND, OR, and XOR operations useful in bit manipulation?s</div>
+            <div id="definition-characterDataRepresentation" class="flashcard-definition">
+                <strong>Answer:</strong> These operations allow for the manipulation of individual bits within a byte or word, enabling tasks such as setting, clearing, toggling, or testing specific bits, which is useful for controlling hardware devices or managing data at a low level.
+            </div>
+        </div>
+
+
+        <!-- Add more flashcards for the remaining questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('multimediaGraphicsVectorGraphics')">
+            <div class="flashcard-keyword">Question: Explain how data for a vector graphic is encoded</div>
+            <div id="definition-multimediaGraphicsVectorGraphics" class="flashcard-definition">
+                <strong>Answer:</strong> Data for a vector graphic is encoded using drawing objects, properties, and drawing lists, representing the geometric shapes and attributes of the image.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('soundRepresentation')">
+            <div class="flashcard-keyword">Question: Describe the representation and encoding of sound, including terms like sampling, sampling rate, and sampling resolution</div>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Classroom</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* ... Your existing styles ... */
+
+        .topics-container {
+            display: flex;
+            justify-content: space-between;
+            /* Ensure there is space around the flex items */
+            padding: 10px;
+            gap: 20px; /* This adds space between your flex items */
+        }
+
+        .topics-list, .flashcards-list {
+            /* Assign flex basis for equal spacing, adjust as needed */
+            flex-basis: calc(33.333% - 20px);
+        }
+
+        .messages-box {
+            flex-basis: calc(33.333% - 20px); /* Adjust size as needed */
+            background-color: #fff; /* White background */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+            /* If you want the box to be the same height as the container: */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .messages-list {
+            list-style-type: none; /* Remove list bullets */
+            padding: 0;
+            margin-bottom: 20px; /* Space before the send message link */
+            overflow-y: auto; /* Allows scrolling for overflow content */
+            flex-grow: 1; /* Allows the list to grow and fill the space */
+        }
+
+        .messages-list li {
+            background-color: #f0f0f0; /* Light gray background for each message */
+            padding: 10px;
+            margin-bottom: 10px; /* Space between messages */
+            border-radius: 5px; /* Rounded corners for the message items */
+        }
+
+        .send-message-link {
+            display: block; /* Make the link fill the container width */
+            text-align: center; /* Center the link text */
+            padding: 10px;
+            background-color: #e9e9e9; /* Slightly darker background for the link */
+            color: #000;
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners for the link */
+            margin-top: auto; /* Pushes the link to the bottom */
+        }
+    
+
+.messages-box h2 {
+    color: #ff0000; /* Black color for "New Messages (2)" */
+}
+
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #000; /* Black color for messages */
+}
+
+.messages-list li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #000; /* Black color for message text */
+}
+    </style>
+</head>
+<body class="computer-science-page">
+    <header>
+        <a href="../index.html" class="home-button">🏠Home</a>
+        <img src="../images/logo.png" alt="Laiwlsm Classroom Logo" class="center-logo">
+    </header>
+    <main class="classroom-content">
+        <h1>Computer Science Topics</h1>
+        <div class="topics-container">
+                 <div class="topics-list">
+                <h2>Topics:</h2>
+                <ul>
+                    <li><a href="PDFs/Unit1_Information_representation.pdf" target="_blank">Unit 1 Information representation</a></li>
+                    <li><a href="PDFs/Unit2_Communication.pdf" target="_blank">Unit 2 Communication</a></li>
+                    <li><a href="PDFs/Unit3_Hardware.pdf" target="_blank">Unit 3 Hardware</a></li>
+                    <li><a href="PDFs/Unit4_Processor_Fundamentals.pdf" target="_blank">Unit 4 Processor Fundamentals</a></li>
+                    <li><a href="PDFs/Unit5_System_Software.pdf" target="_blank">Unit 5 System Software</a></li>
+                    <li><a href="PDFs/Unit6_Security.pdf" target="_blank">Unit 6 Security</a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="flashcards-list">
+                <h2>Topic Questions(Using ChatGPT API):</h2>
+                <ul>
+                    <li><a href="Question HTMLs/Questions.html">Unit 1 Questions </a></li>
+                    <li><a href="Question HTMLs/Questions2.html">Unit 2 Questions</a></li>
+                    <li><a href="Question HTMLs/Questions3.html">Unit 3 Questions </a></li>
+                    <li><a href="Question HTMLs/Questions4.html">Unit 4 Questions </a></li>
+                    <li><a href="Question HTMLs/Questions5.html">Unit 5 Questions</a></li>
+                    <li><a href="Question HTMLs/Questions6.html">Unit 6 Questions</a></li>
+                </ul>
+                
+            </div>
+
+         
+            <div class="messages-box">
+                <h2>New Messages (2)</h2>
+                <ul class="messages-list">
+                    <li>Armaan Bashir: Can you send the homework</li>
+                    <li>Ahmed Dogar: Do we need to know logic gates</li>
+                </ul>
+                <a href="#send-message" class="send-message-link">Send Message here</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

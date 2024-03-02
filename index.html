@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiwlsm Classroom</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .updates-section {
+            width: 80%;
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .updates-title {
+            color: #6a2c70;
+            margin-bottom: 10px;
+        }
+
+        .updates-list {
+            list-style: none;
+        }
+
+        .updates-list li {
+            background-color: #f8f8f8;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            color: red; /* Set the text color to red for update messages */
+        }
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right bottom, #6a2c70, #b83b5e);
+            color: #000; /* Changed text color to black */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: flex-start; /* Align content to the top */
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .user-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-info {
+            color: #000; /* Changed text color to black */
+            text-align: left;
+        }
+
+        .full-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .current-subjects {
+            font-size: 1.2em;
+            font-style: italic;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .current-subjects li {
+            margin-bottom: 5px;
+        }
+
+        main {
+            width: 100%;
+            margin: 0 20px;
+        }
+
+        #logo {
+            display: block;
+            margin: 20px auto 0; /* Center and adjust top margin for space */
+            max-width: 100%; /* Ensure the logo doesn't exceed its natural size */
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right bottom, #6a2c70, #b83b5e);
+        color: #000; /* Changed text color to black */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        justify-content: flex-start; /* Align content to the top */
+        min-height: 100vh;
+    }
+
+    header {
+        background-color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #search-btn,
+    #settings-btn,
+    #support-btn {
+        font-size: 25px; /* Adjust the font size for smaller buttons */
+        padding: 8px 12px; /* Adjust padding accordingly */
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 18px; /* Adjust the font size for smaller buttons */
+        padding: 10px 15px; /* Adjust padding accordingly */
+        background: #ffffff; /* Button background */
+        color: #000000; /* Button text color */
+        text-decoration: none; /* Remove underline from links */
+        border-radius: 5px; /* Rounded corners for aesthetic */
+        margin-left: 10px; /* Maintain spacing between buttons */
+        transition: background-color 0.3s; /* Smooth background color transition on hover */
+    }
+
+    .button:hover {
+        background-color: #f0f0f0; /* Slightly darker background on hover */
+    }
+        .updates-section {
+            width: 80%; /* Adjust the width as necessary */
+            background-color: #ffffff; /* White background for the updates box */
+            padding: 20px;
+            margin: 20px 0; /* Add space above and below the updates section */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            text-align: left; /* Align text to the left */
+        }
+
+        .updates-title {
+            color: #6a2c70; /* Use the same purple tone as the gradient */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        .updates-list {
+            list-style: none; /* Remove default list styling */
+        }
+
+        .updates-list li {
+            background-color: #f8f8f8; /* Light grey background for list items */
+            margin-bottom: 10px; /* Space between list items */
+            padding: 10px; /* Padding inside list items */
+            border-radius: 4px; /* Rounded corners for list items */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-profile">
+            <img src="images/profile-image.jpg" alt="User Profile Image" class="profile-image">
+            <div class="profile-info">
+                <p class="full-name">Rehan Sengupta</p>
+                <ul class="current-subjects">
+                    <li>Your Current Communities:</li>
+                    <li>Cambridge Computer Science 9618</li>
+                    <li>AQA Physics 7407</li>
+                    <li>AQA Psychology 7182</li>
+                </ul>
+            </div>
+        </div>
+        <img src="images/logo.png" alt="Laiwlsm Classroom Logo" id="logo">
+        <div class="top-buttons">
+            <a href="search.html" id="search-btn" class="button">🔍 Search</a>
+            <a href="settings.html" id="settings-btn" class="button">⚙️ Settings</a>
+            <a href="service.html" id="support-btn" class="button">🛠️ Support</a>
+        </div>
+    </header>
+    <main>
+        <section class="classroom-list">
+             <a href="classrooms/computer-science.html" class="classroom-link">
+                <article class="classroom" id="computer-science" style="background-color: #1ba73e;">
+                    <h2>CAMBRIDGE A LEVEL COMPUTER SCIENCE</h2>
+                    <img src="images/computer-science.jpg" alt="Computer Science">
+                </article>
+            </a>
+            <a href="classrooms/physics.html" class="classroom-link">
+                <article class="classroom" id="physics" style="background-color: #936fe7;">
+                    <h2>AQA A LEVEL PHYSICS</h2>
+                    <img src="images/physics.jpg" alt="Physics">
+                </article>
+            </a>
+            <a href="classrooms/mathematics.html" class="classroom-link">
+                <article class="classroom" id="mathematics" style="background-color: #e835b6;">
+                    <h2>AQA A LEVEL PSYCHOLOGY</h2>
+                    <img src="images/mathematics.jpg" alt="Mathematics">
+                </article>
+            </a>
+        </section>
+
+      
+        <div class="updates-section">
+            <h2 class="updates-title">Current Updates (3):</h2>
+            <ul class="updates-list">
+                <li>Sahil Nalakath requested to be your friend</li>
+                <li>Cambridge Computer Science (9618) Updated their Syllabus</li>
+                <li>Create a Community ➕</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+       <div style="text-align: center; color: #ffffff; margin-top: 20px;"> <!-- Changed text color to white -->
+            <p style="font-size: 18px; font-weight: bold;">The Creators: Rehan Sengupta, Armaan Bashir, Daren Tan</p>
+            <p style="font-style: italic; font-size: 16px; margin-bottom: 5px;">"Concise notes for your exam board with no excess information"</p>
+            <p style="font-style: italic; font-size: 16px;">"A way for students and teachers to connect through their subjects"</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

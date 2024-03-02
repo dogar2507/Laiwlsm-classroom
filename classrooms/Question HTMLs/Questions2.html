@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Unit 1 Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right bottom, #3498db, #2980b9);
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #120606;
+        }
+
+        .flashcard-container {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .flashcard {
+            background-color: #f8f6f8;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .flashcard-definition {
+            margin-top: 10px;
+            display: none;
+            color: #058024;
+        }
+    </style>
+    <script>
+        function toggleDefinition(keyword) {
+            const definition = document.getElementById(`definition-${keyword}`);
+            if (definition.style.display === 'none') {
+                definition.style.display = 'block';
+            } else {
+                definition.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Computer Science Unit 2 Questions</h1>
+    <div class="flashcard-container">
+
+        <div class="flashcard" onclick="toggleDefinition('networkDevices')">
+            <div class="flashcard-keyword">Question: Show understanding of the purpose and benefits of networking devices</div>
+            <div id="definition-networkDevices" class="flashcard-definition">
+                <strong>Answer:</strong> Networking devices facilitate communication between computers, enhancing connectivity and efficiency.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('LANandWAN')">
+            <div class="flashcard-keyword">Question: Show understanding of the characteristics of a LAN and a WAN</div>
+            <div id="definition-LANandWAN" class="flashcard-definition">
+                <strong>Answer:</strong> LAN is local, WAN spans larger distances; differences include speed and coverage.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('clientServerPeerToPeer')">
+            <div class="flashcard-keyword">Question: Explain the client-server and peer-to-peer models of networked computers</div>
+            <div id="definition-clientServerPeerToPeer" class="flashcard-definition">
+                <strong>Answer:</strong> Client-server involves centralized resources, peer-to-peer shares resources among connected devices.
+            </div>
+        </div>
+
+        <!-- Add more flashcards for the remaining questions and answers -->
+
+        <div class="flashcard" onclick="toggleDefinition('thinClientThickClient')">
+            <div class="flashcard-keyword">Question: Show understanding of thin-client and thick-client and the differences between them</div>
+            <div id="definition-thinClientThickClient" class="flashcard-definition">
+                <strong>Answer:</strong> Thin-client relies on a server for processing, while thick-client handles processing locally.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('networkTopologies')">
+            <div class="flashcard-keyword">Question: Show understanding of the bus, star, mesh, and hybrid topologies</div>
+            <div id="definition-networkTopologies" class="flashcard-definition">
+                <strong>Answer:</strong> Bus, star, mesh, and hybrid are network topologies with distinct structures and advantages.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('packetTransmission')">
+            <div class="flashcard-keyword">Question: Understand how packets are transmitted between two hosts for a given topology</div>
+            <div id="definition-packetTransmission" class="flashcard-definition">
+                <strong>Answer:</strong> Packet transmission involves data division and routing for efficient communication.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('cloudComputing')">
+            <div class="flashcard-keyword">Question: Show understanding of cloud computing, including the use of public and private clouds</div>
+            <div id="definition-cloudComputing" class="flashcard-definition">
+                <strong>Answer:</strong> Cloud computing involves accessing and storing data over the internet; public and private clouds differ in shared vs. dedicated usage.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('wirelessWiredNetworks')">
+            <div class="flashcard-keyword">Question: Show understanding of the differences between and implications of the use of wireless and wired networks</div>
+            <div id="definition-wirelessWiredNetworks" class="flashcard-definition">
+                <strong>Answer:</strong> Wireless offers mobility, wired provides stability; considerations include speed, security, and deployment.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('networkCables')">
+            <div class="flashcard-keyword">Question: Describe the characteristics of copper cable, fibre-optic cable, radio waves, microwaves, satellites</div>
+            <div id="definition-networkCables" class="flashcard-definition">
+                <strong>Answer:</strong> Different cables and waves vary in speed, signal type, and application within a network.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('LANHardware')">
+            <div class="flashcard-keyword">Question: Describe the hardware that is used to support a LAN</div>
+            <div id="definition-LANHardware" class="flashcard-definition">
+                <strong>Answer:</strong> LAN hardware includes switches, servers, NICs, WNICs, WAPs, cables, bridges, and repeaters.
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="toggleDefinition('routerFunction')">
+            <div class="flashcard-keyword">Question: Describe the role and function of a router in a network</div>
+            <div id="definition-routerFunction" class="flashcard-definition">
+                <strong>Answer:</strong> Routers direct data traffic between networks, ensuring efficient communication.
+            </div

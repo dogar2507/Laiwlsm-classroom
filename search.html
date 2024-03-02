@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right bottom, #3498db, #8e44ad);
+            color: #000; /* Black text color */
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .top-buttons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .top-buttons button {
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #000; /* Black text color */
+            cursor: pointer;
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b29d9d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-buttons">
+        <button onclick="window.location.href='index.html'">🏠 Home</button>
+    </div>
+    <h1>Search: Find Your Exam Syllabus</h1>
+    <div class="search-box">
+        <form action="search-results.html" method="GET">
+            <label for="search">Enter your exam board or subject:</label>
+            <input type="text" id="search" name="search" placeholder="E.g., AQA Biology, Algebra, etc.">
+            <br>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+/* styles-main.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right bottom, #3366ff, #9900cc);
+    color: #fff;
+}
+
+header {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header #logo {
+    max-width: 300px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-height: 100vh;
+}
+/* Add specific styles for the main page if needed */
